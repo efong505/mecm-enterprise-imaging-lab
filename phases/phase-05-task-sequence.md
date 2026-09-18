@@ -1,30 +1,54 @@
 # Phase 05 — Task Sequence
 
-## Purpose
+## Status
 
-This phase is for task sequence planning in the MECM Enterprise Imaging Lab.
+**Planned — Not Yet Executed**
 
-A task sequence is the organized workflow used during operating system deployment. At this bootstrap stage, the file only defines the learning purpose and documentation expectations.
+## Objective
 
-## Learning Goals
+Build and validate a controlled operating-system deployment task sequence using the imaging infrastructure established in Phase 04.
 
-- Understand what a task sequence is.
-- Identify which imaging components must exist first.
-- Record the intended purpose of the test task sequence.
-- Keep deployment planning separate from deployment results.
+## Prerequisites
 
-## Starter Tasks
+- Phase 04 complete
+- boot image available
+- operating-system image / source available
+- distribution content healthy
+- test-client target identified
+- deployment collection strategy documented
 
-- Review the OS Deployment Agent file.
-- Confirm imaging infrastructure notes exist.
-- Record the planned test client target.
-- Identify what evidence should be captured later.
-- Prepare a phase checkpoint.
+## Planned Configuration
 
-## Completion Criteria
+Record the task-sequence design, including:
 
-This phase is complete when the task sequence plan and related notes are documented.
+- task-sequence purpose;
+- boot image;
+- operating-system image;
+- partition / format steps as appropriate;
+- driver strategy;
+- application or package placeholders if used;
+- post-install configuration;
+- target collection;
+- deployment availability / requirement choice.
 
-## Notes
+## Validation Criteria
 
-Do not add completed deployment claims until the lab work has actually been performed.
+Phase 05 is complete only when:
+
+- the task sequence exists;
+- all referenced content is available;
+- configuration is reviewed for the controlled test target;
+- deployment settings are documented;
+- the sequence is ready for Phase 06 test execution.
+
+## Evidence Required
+
+- sanitized task-sequence screenshots or exported summary;
+- content-reference validation;
+- deployment-target notes;
+- lab notes;
+- checkpoint decision.
+
+## Boundaries
+
+A configured task sequence is not evidence of a successful OS deployment. Deployment success belongs to Phase 06.
