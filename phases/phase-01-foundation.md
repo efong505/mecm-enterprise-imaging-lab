@@ -1,34 +1,49 @@
 # Phase 01 — Foundation
 
-## Purpose
+## Status
 
-This phase establishes the foundation for the MECM Enterprise Imaging Lab before any server build or configuration work begins.
+**Planned — Not Yet Executed**
 
-The goal is to define the lab scope, learning boundaries, topology assumptions, documentation standards, and phase completion expectations.
+## Objective
 
-## Learning Goals
+Establish the controlled MECM lab scope, topology baseline, documentation model, and evidence requirements before any server build or configuration work begins.
 
-- Understand the purpose of the lab.
-- Identify the planned server roles.
-- Document the lab-only network design.
-- Confirm that this is a practice environment, not production documentation.
-- Prepare note-taking, screenshot, and checkpoint templates.
+## Prerequisites
 
-## Starter Tasks
+- Repository structure reviewed
+- Lab purpose and boundaries understood
+- No production or employer environment will be used
+- Evidence-integrity rules accepted
 
-- Review `README.md`.
-- Review `docs/lab-overview.md`.
-- Review `docs/lab-requirements.md`.
-- Draft the first version of `docs/lab-network-design.md`.
-- Create a lab notes file from `templates/lab-notes-template.md`.
-- Prepare the first checkpoint using `checkpoints/phase-checkpoint-template.md`.
+## Planned Work
 
-## Completion Criteria
+- Review `README.md`
+- Review `docs/lab-overview.md`
+- Review `docs/lab-requirements.md`
+- Define the initial topology in `docs/lab-network-design.md`
+- Record unresolved design decisions
+- Create the first lab-notes artifact
+- Prepare the Phase 01 checkpoint
 
-This phase is complete when the learner has documented the intended lab scope, planned topology, required systems, and open questions.
+## Validation Criteria
 
-Do not mark this phase complete if the network design and requirements are still blank.
+Phase 01 is complete only when:
 
-## Notes
+- lab scope is documented;
+- planned server roles are identified;
+- network and isolation assumptions are recorded;
+- infrastructure requirements are listed;
+- open questions are explicit;
+- the checkpoint records actual completion evidence.
 
-This phase should not include server installation steps. It is for planning and orientation only.
+## Evidence Required
+
+- completed lab notes;
+- completed network-design baseline;
+- requirements status;
+- checkpoint decision;
+- architecture diagram if available.
+
+## Boundaries
+
+This phase does not authorize server installation or configuration. No implementation state should be claimed until later work is actually performed.
