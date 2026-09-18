@@ -1,33 +1,61 @@
 # Phase 07 — Enterprise Concepts
 
-## Purpose
+## Status
 
-This phase connects the practice lab to larger enterprise endpoint management concepts.
+**Planned — Requires Earlier Phase Evidence**
 
-The goal is not to make the lab production-ready. The goal is to help the learner understand how the small lab maps to broader operational ideas.
+## Objective
 
-## Learning Goals
+Map the completed lab architecture and observed behavior to broader enterprise endpoint-management considerations without representing the lab as production-scale experience.
 
-- Compare lab decisions with enterprise considerations.
-- Identify which parts of the lab are simplified.
-- Understand why documentation, validation, and troubleshooting matter at scale.
-- Record future learning topics.
+## Prerequisites
 
-## Starter Topics
+- earlier implementation phases contain actual evidence;
+- lab simplifications are documented;
+- known constraints and unresolved issues are recorded.
 
-- Multiple distribution points
-- Boundaries and boundary groups
-- Role separation
-- Content distribution planning
-- Client health at scale
-- Change control concepts
-- Imaging lifecycle considerations
-- Reporting and monitoring concepts
+## Review Areas
+
+Evaluate the lab against enterprise considerations such as:
+
+- multiple distribution points;
+- boundaries and boundary groups;
+- site and role separation;
+- content-distribution strategy;
+- client health at scale;
+- change control;
+- imaging lifecycle management;
+- reporting and monitoring;
+- high availability and recovery considerations;
+- security and administrative separation.
+
+## Analysis Requirements
+
+For each topic, record:
+
+- what the lab demonstrates;
+- what the lab simplifies;
+- what would change at enterprise scale;
+- what remains outside current hands-on evidence;
+- what should be studied or implemented next.
 
 ## Completion Criteria
 
-This phase is complete when the learner can explain which parts of the lab are realistic, which parts are simplified, and which enterprise topics need future study.
+Phase 07 is complete when the repository clearly distinguishes:
 
-## Notes
+- validated lab evidence;
+- design-only concepts;
+- enterprise-scale considerations;
+- remaining development gaps.
 
-This phase should stay conceptual until earlier phases have real lab notes and validation evidence.
+## Evidence Required
+
+- enterprise-comparison notes;
+- references to completed phase evidence;
+- identified limitations;
+- future-development actions;
+- checkpoint decision.
+
+## Boundaries
+
+This phase does not convert lab work into professional production MECM experience. It exists to demonstrate architectural judgment and awareness of scale.
