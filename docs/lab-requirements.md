@@ -2,50 +2,72 @@
 
 ## Purpose
 
-This document captures the expected requirements for the MECM Enterprise Imaging Lab before implementation begins.
+This document defines the infrastructure, software, media, and documentation prerequisites that must be resolved before MECM implementation begins.
 
-The purpose is to help the learner think through the required systems, roles, resources, and assumptions without committing secrets or pretending that infrastructure has already been configured.
+Requirements may remain `Pending` until verified. A requirement must not be marked satisfied without corresponding evidence.
 
-## Core Requirements to Identify
+## Infrastructure Requirements
 
-Document the following before starting the build:
+Document and verify:
 
-- Virtualization platform to be used for the lab
-- Number of virtual machines planned
-- Operating system versions planned for each server and client
-- Domain name strategy for the isolated lab
-- IP addressing approach
-- DNS approach
-- Storage capacity available
-- Memory and CPU available
-- Internet access requirements
-- ISO or installation media sources
-- MECM / Configuration Manager Current Branch installation media source
-- SQL Server installation media source
-- Windows ADK and WinPE add-on requirements
+- virtualization platform;
+- available CPU and memory capacity;
+- available storage capacity;
+- planned virtual-machine count;
+- isolated lab network or virtual switch;
+- IP addressing approach;
+- DNS strategy;
+- DHCP strategy where applicable;
+- controlled Internet access requirements.
 
-## Suggested Server Roles
+## Server and Client Roles
 
-A basic learning lab may include:
+A representative topology may include:
 
-| Role | Notes |
-|---|---|
-| Domain Controller | Provides AD DS and DNS for the practice domain. |
-| MECM Site Server | Hosts the MECM primary site role for the lab. |
-| SQL Server | Hosts the site database, either colocated or separate depending on design. |
-| Distribution Point | Provides content distribution and imaging support. |
-| Test Client | Receives the MECM client and later OS deployment testing. |
+| Role | Purpose | Status |
+|---|---|---|
+| Domain Controller | AD DS and DNS for the isolated lab domain | Planned |
+| MECM Primary Site Server | Configuration Manager primary site | Planned |
+| SQL Server | Site database; colocated or separate based on final design | Planned |
+| Distribution Point | Content distribution and PXE / OSD support | Planned |
+| Test Client | MECM client, imaging, deployment, and troubleshooting validation | Planned |
 
-## Readiness Questions
+## Software and Media Requirements
 
-Before starting implementation, answer:
+Identify the source and intended version for:
 
-1. Is the lab isolated from production systems?
-2. Are all names, addresses, and credentials lab-only?
-3. Is there enough compute capacity for all planned VMs?
-4. Is the learner documenting assumptions before making changes?
-5. Has the lab owner identified where screenshots and notes will be stored?
+- supported Windows Server media;
+- supported Windows client media;
+- Configuration Manager Current Branch installation media;
+- SQL Server media;
+- Windows ADK;
+- Windows PE add-on;
+- required Windows features / roles;
+- any supporting tools used for logging, validation, or evidence capture.
 
-## Status
+Version-specific decisions should be verified against current Microsoft documentation before implementation.
 
-This file is a starter planning document. Fill it in as the lab design becomes more specific.
+## Security and Isolation Requirements
+
+Before build work begins:
+
+1. The lab must be isolated from employer or production systems.
+2. Names, addresses, and credentials must be lab-only.
+3. No production secrets or real user data may be introduced.
+4. Screenshots must be reviewed before publication.
+5. Evidence must show only the controlled lab environment.
+
+## Readiness Gate
+
+Phase 02 should not be considered complete until:
+
+- topology is documented;
+- compute/storage capacity is confirmed;
+- server/client operating-system choices are recorded;
+- required media sources are identified;
+- AD/DNS/SQL/network assumptions are documented;
+- unresolved blockers are explicitly listed.
+
+## Current Status
+
+**Status: Planned — requirements not yet fully validated.**
