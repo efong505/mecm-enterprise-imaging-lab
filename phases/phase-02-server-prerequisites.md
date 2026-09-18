@@ -1,30 +1,50 @@
 # Phase 02 — Server Prerequisites
 
-## Purpose
+## Status
 
-This phase organizes prerequisite planning before the MECM installation phase.
+**Planned — Not Yet Executed**
 
-The focus is readiness documentation, not finished lab results.
+## Objective
 
-## Learning Goals
+Validate the infrastructure, operating-system, directory, DNS, SQL, network, and installation-media prerequisites required before Configuration Manager installation.
 
-- Identify required server roles.
-- Review supporting components.
-- Record assumptions before setup work begins.
-- Prepare validation notes for the next phase.
+## Prerequisites
 
-## Starter Tasks
+- Phase 01 completed
+- topology documented
+- lab isolation approach documented
+- initial server-role decisions recorded
 
-- Review lab requirements.
-- Review the network design.
-- Identify missing prerequisites.
-- Record open questions.
-- Prepare a phase checkpoint.
+## Planned Work
 
-## Completion Criteria
+- verify virtualization capacity;
+- verify server/client operating-system selections;
+- document AD DS and DNS requirements;
+- document SQL Server placement and requirements;
+- identify Configuration Manager installation media;
+- identify Windows ADK and WinPE requirements;
+- identify required Windows roles/features;
+- document network, DNS, DHCP, and PXE assumptions;
+- record unresolved prerequisite gaps.
 
-This phase is complete when prerequisite assumptions and open items are documented.
+## Validation Criteria
 
-## Notes
+Phase 02 is complete only when:
 
-Detailed steps can be added later after the lab plan is reviewed.
+- required compute/storage capacity is confirmed;
+- operating-system and software selections are recorded;
+- media sources are identified;
+- AD/DNS/SQL/network prerequisites are documented;
+- unresolved blockers are either resolved or explicitly carried forward.
+
+## Evidence Required
+
+- prerequisite checklist or lab notes;
+- version/source references;
+- capacity notes;
+- network-design update;
+- checkpoint decision.
+
+## Boundaries
+
+This phase validates readiness. It does not claim that MECM, SQL Server, AD DS, or deployment infrastructure has been installed unless corresponding implementation evidence exists.
