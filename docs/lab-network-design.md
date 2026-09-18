@@ -2,62 +2,72 @@
 
 ## Purpose
 
-This document is used to plan the lab network before any MECM implementation work begins.
+This document defines the planned network topology, role placement, naming strategy, and isolation boundaries for the MECM Enterprise Imaging Lab.
 
-The goal is to describe the practice topology clearly enough that another learner could understand the intended layout, server roles, naming approach, and isolation boundaries.
-
-This is not a production network design document.
+It is a lab design artifact, not a production network design.
 
 ## Design Principles
 
-Use these principles when documenting the lab:
-
-- Keep the lab isolated from production systems.
+- Keep the environment isolated from production and employer systems.
 - Use lab-only names, addresses, and credentials.
-- Avoid publishing private environment details.
-- Document assumptions before implementation begins.
-- Mark anything uncertain as pending instead of pretending it is complete.
+- Avoid publishing sensitive or private infrastructure details.
+- Document assumptions before implementation.
+- Record planned and implemented state separately.
+- Validate network dependencies before enabling PXE or deployment workflows.
 
-## Suggested Logical Topology
+## Planned Logical Topology
 
-A simple MECM imaging lab may include:
-
-| System | Example Role | Notes |
+| System | Planned Role | Status |
 |---|---|---|
-| DC01 | Domain Controller / DNS | Provides the practice Active Directory domain and name resolution. |
-| CM01 | MECM Primary Site Server | Hosts Configuration Manager site roles used for the lab. |
-| SQL01 | SQL Server | Hosts the MECM site database if separated from CM01. |
-| DP01 | Distribution Point / PXE | Stores deployment content and supports imaging scenarios. |
-| WINCLIENT01 | Test Client | Used for client installation and deployment testing. |
+| DC01 | Domain Controller / DNS | Planned |
+| CM01 | MECM Primary Site Server | Planned |
+| SQL01 | SQL Server, if separated from CM01 | Planned / design decision pending |
+| DP01 | Distribution Point / PXE | Planned / placement decision pending |
+| WINCLIENT01 | Test Client | Planned |
 
-## Network Items to Document
+## Network Design Record
 
-Fill in the following during planning:
+Complete during Phase 01 / Phase 02:
 
-- Lab network name
-- Lab-only domain name
-- IP address range
-- Subnet mask
-- Default gateway strategy
-- DNS server strategy
-- DHCP strategy
-- PXE boot strategy
-- Internet access strategy
-- VM switch or virtual network name
-- Any isolation controls
+| Item | Decision / Value | Status |
+|---|---|---|
+| Lab network / virtual switch |  | Pending |
+| Lab-only domain |  | Pending |
+| IP address range |  | Pending |
+| Subnet mask / prefix |  | Pending |
+| Default gateway strategy |  | Pending |
+| DNS server strategy |  | Pending |
+| DHCP strategy |  | Pending |
+| PXE boot path |  | Pending |
+| Internet access strategy |  | Pending |
+| Isolation controls |  | Pending |
 
-## Diagram Placeholder
+## PXE / Deployment Considerations
 
-Network diagrams should be stored in `/diagrams`.
+Before PXE implementation, document:
 
-Do not add fake diagrams or screenshots. Add diagrams only when the design has been drafted or implemented.
+- which component provides DHCP;
+- whether client and distribution point share a broadcast domain;
+- how PXE traffic reaches the intended distribution point;
+- firmware mode used by the test client;
+- boot-image availability;
+- boundary and boundary-group assumptions.
 
-## Open Questions
+## Diagram
 
-Use this section to capture design questions that must be answered before proceeding.
+Architecture and network diagrams belong in `/diagrams`.
 
-- Will SQL Server be colocated with the MECM server or separated?
-- Will the distribution point be colocated or separated?
-- Will DHCP be handled by the domain controller, router, or another lab system?
-- How will PXE traffic reach the distribution point?
-- What client operating systems will be tested?
+A diagram should be labeled `Planned`, `Draft`, or `Implemented` and should not imply deployment evidence that does not exist.
+
+## Open Design Decisions
+
+- SQL Server colocated with CM01 or separated?
+- Distribution Point colocated with CM01 or separated?
+- DHCP location and scope?
+- PXE traffic path?
+- Test-client operating-system version(s)?
+- Required Internet access and egress restrictions?
+
+## Current Status
+
+**Status: Planned — topology values and role-placement decisions remain to be validated.**
