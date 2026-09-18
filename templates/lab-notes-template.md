@@ -4,7 +4,7 @@
 
 - Date:
 - Phase:
-- Agent or guide used:
+- Reference / runbook used:
 - Systems involved:
 - Goal for this session:
 
@@ -15,7 +15,7 @@ Document the current state before making changes.
 - What is already complete?
 - What is still pending?
 - What assumptions are being made?
-- What files or runbooks are being used?
+- What files, runbooks, or vendor references are being used?
 
 ## Work Performed
 
@@ -47,6 +47,14 @@ Use this section for facts observed during the lab.
 - Next action 2:
 - Next action 3:
 
+## Evidence References
+
+- Screenshot / artifact:
+- Log file:
+- Command / console output:
+- Related change record:
+- Related troubleshooting entry:
+
 ## Integrity Reminder
 
-Do not record planned work as completed work. Do not add fake screenshots, fake validation notes, or invented results.
+Do not record planned work as completed work. Do not add fabricated screenshots, validation notes, or results.
