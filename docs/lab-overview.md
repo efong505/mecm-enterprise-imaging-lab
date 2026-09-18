@@ -2,36 +2,55 @@
 
 ## Purpose
 
-This document defines the learning scope and boundaries for the MECM Enterprise Imaging Lab.
+This document defines the scope, boundaries, and intended technical outcomes of the MECM Enterprise Imaging Lab.
 
-The goal is to help the learner understand how Microsoft Endpoint Configuration Manager / Configuration Manager Current Branch is used in an enterprise-style imaging and endpoint management environment.
+The lab is designed to establish and validate hands-on familiarity with Microsoft Endpoint Configuration Manager / Configuration Manager Current Branch in an enterprise-style imaging and endpoint-management environment.
 
-This file should describe the lab before implementation begins. It should not claim that servers, services, task sequences, or deployments already exist.
+This document describes the planned environment before implementation. It must not imply that servers, services, task sequences, deployments, or validation results exist until they have actually been created and recorded.
 
-## Learning Objectives
+## Technical Objectives
 
-By the end of the completed lab, the learner should be able to explain:
+The completed lab should establish evidence of practical understanding in:
 
-- What MECM is and why enterprises use it
-- How MECM supports operating system deployment
-- How MECM relates to Active Directory, DNS, SQL Server, IIS, WSUS, distribution points, and client agents
-- How content moves through a distribution point model
-- How PXE and task sequences support imaging workflows
-- How client health, logs, and deployment status are reviewed
-- How lab notes and checkpoints create repeatable learning evidence
+- MECM / Configuration Manager architecture and site roles
+- Active Directory Domain Services and DNS dependencies
+- SQL Server requirements for a primary site
+- content distribution and distribution-point behavior
+- PXE and Windows PE boot flow
+- operating-system deployment and task sequences
+- client installation, discovery, inventory, and health
+- log-driven troubleshooting
+- phase validation, evidence capture, and repeatable documentation
 
-## Intended Audience
+## Project Context
 
-This lab is intended for learners who want hands-on exposure to enterprise imaging concepts without presenting the material as production-ready guidance.
+This is a controlled lab / production-like practice environment intended to complement existing systems-administration experience with current MECM hands-on evidence.
 
-The expected learner may have experience with Windows administration, help desk support, systems administration, virtualization, or software deployment, but may not have built a Configuration Manager lab before.
+It is not presented as professional production MECM ownership.
 
 ## Boundaries
 
-This lab should stay focused on learning. It should not include production secrets, private infrastructure details, real tenant information, customer data, or invented results.
+The lab must not include:
 
-When a step has not been performed yet, document it as planned, pending, or not started.
+- production secrets or credentials;
+- employer or customer data;
+- private production hostnames or network details;
+- real tenant information;
+- fabricated screenshots;
+- invented validation results;
+- unperformed work presented as complete.
 
-## How This File Should Be Used
+When a step has not been executed, its state must remain `Planned`, `Pending`, `Not Started`, or another accurate status.
 
-Update this file when the learning scope changes. Keep it high-level. Detailed steps belong in phase files, runbooks, or future tutorial documents.
+## Documentation Model
+
+Detailed implementation and validation work belongs in:
+
+- `docs/` for architecture and requirements;
+- `phases/` for implementation work packages;
+- `runbooks/` for repeatable operational checks and troubleshooting;
+- `templates/` for evidence capture;
+- `checkpoints/` for phase-completion decisions;
+- `diagrams/` for architecture and flow diagrams.
+
+This file should remain the high-level technical scope document.
