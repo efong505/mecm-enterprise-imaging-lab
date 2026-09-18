@@ -2,76 +2,74 @@
 
 ## Purpose
 
-This glossary defines common terms used throughout the MECM Enterprise Imaging Lab.
-
-The goal is to help the learner build vocabulary while moving through the lab phases. Definitions should stay practical, plain-language, and tied to the lab context.
+This glossary defines common terms used throughout the MECM Enterprise Imaging Lab. Definitions are intentionally concise and tied to the technical context of the project.
 
 ## Terms
 
 ### MECM / Configuration Manager Current Branch
 
-Microsoft Endpoint Configuration Manager, also known as Configuration Manager Current Branch, is an enterprise management platform used for endpoint management, software deployment, patching, inventory, compliance settings, and operating system deployment.
+Microsoft Configuration Manager Current Branch is an enterprise endpoint-management platform used for software deployment, inventory, compliance settings, patching, client management, and operating-system deployment.
 
 ### Site Server
 
-The main server that hosts Configuration Manager site roles and coordinates management activity for the lab environment.
+The server that hosts Configuration Manager site components and coordinates management activity for the site.
 
 ### Primary Site
 
-A Configuration Manager site that manages clients directly. In this lab, the primary site is the main learning environment.
+A Configuration Manager site that directly manages clients and site-system roles.
 
 ### Site Database
 
-The SQL Server database used by Configuration Manager to store site data, client data, inventory, configuration, deployment information, and status.
+The SQL Server database used by Configuration Manager to store site configuration, client data, inventory, deployment information, and status.
 
 ### Distribution Point
 
-A site system role that stores content for clients, such as applications, packages, boot images, operating system images, and task sequence content.
+A site-system role that stores content for clients, including applications, packages, boot images, operating-system images, and task-sequence content.
 
 ### PXE
 
-Preboot Execution Environment. PXE allows a client to start from the network and contact deployment infrastructure before a local operating system loads.
+Preboot Execution Environment. PXE allows a client to boot from the network and contact deployment infrastructure before a local operating system loads.
 
 ### Boot Image
 
-A Windows PE image used to start the deployment environment for operating system deployment.
+A Windows PE image used to start an operating-system deployment environment.
 
 ### Operating System Image
 
-A Windows image, often a WIM file, used as the base operating system source for deployment.
+A Windows image, commonly a WIM file, used as an operating-system source for deployment.
 
 ### Task Sequence
 
-A structured set of steps used by Configuration Manager to deploy or configure an operating system, install applications, apply drivers, and perform post-install actions.
+An ordered set of Configuration Manager actions used to deploy or configure an operating system, install applications, apply drivers, and perform additional deployment steps.
 
-### Client Agent
+### Configuration Manager Client
 
-The Configuration Manager software installed on a managed endpoint. It allows the client to receive policy, report inventory, install software, and report health.
+Software installed on a managed endpoint that allows the device to receive policy, report inventory, install software, and report status.
 
 ### Boundary
 
-A network location definition used by Configuration Manager to associate clients with site resources such as distribution points.
+A network-location definition used by Configuration Manager to identify where clients reside.
 
 ### Boundary Group
 
-A collection of boundaries used to organize client assignment and content location behavior.
+A collection of boundaries used for site assignment and content-location behavior.
 
 ### Content Distribution
 
-The process of sending deployment content from the site server or content source to distribution points.
+The process of transferring deployment content to distribution points for client use.
 
 ### Discovery
 
-The process Configuration Manager uses to locate resources such as users, groups, systems, or network locations.
+Configuration Manager processes that locate resources such as systems, users, groups, and network locations.
 
 ### Collection
 
-A logical grouping of resources such as devices or users. Collections are commonly used to target deployments.
+A logical group of devices or users used to organize management and target deployments.
 
 ### Deployment
 
-An instruction that makes software, updates, task sequences, or settings available or required for a target collection.
+An instruction that makes software, updates, task sequences, or configuration available or required for a target collection.
 
 ### Log File
 
-A text-based record used to troubleshoot Configuration Manager components and client actions. Logs are central to MECM troubleshooting.
+A text record generated by Configuration Manager components or clients. Log correlation is a primary troubleshooting method for setup, content distribution, PXE, client health, policy, and deployment workflows.
