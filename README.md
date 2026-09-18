@@ -1,104 +1,192 @@
 # MECM Enterprise Imaging Lab
 
-## Purpose
+Enterprise-style Microsoft Endpoint Configuration Manager (MECM / Configuration Manager Current Branch) lab focused on Windows endpoint deployment, Active Directory and DNS dependencies, SQL Server planning, distribution infrastructure, PXE, operating system deployment, task sequences, client management, and log-driven troubleshooting.
 
-This repository is a guided practice lab for learning Microsoft Endpoint Configuration Manager / Configuration Manager Current Branch in an enterprise imaging and endpoint management context.
+The project is organized as a controlled lab with repeatable implementation phases, validation checkpoints, troubleshooting runbooks, and evidence capture. It is intended to build current hands-on familiarity with MECM architecture and operations without representing lab work as employer production ownership.
 
-The lab is designed around a Multi-Agent System (MAS) learning model. Instead of trying to write one large tutorial all at once, the repository separates planning, prerequisites, installation, imaging infrastructure, client management, troubleshooting, and documentation into focused agent files and phase files.
+## Current Lab Status
 
-This repository is a learning lab. It is not production documentation.
+**Evidence classification:** Hands-on learning lab / production-like practice environment.
 
-## What This Lab Teaches
+The repository currently contains the lab architecture, implementation phases, runbooks, templates, checkpoints, and supporting documentation needed to build and validate the environment.
 
-This lab is intended to help a learner understand how MECM is used in an enterprise-style imaging and endpoint management environment.
+Full tutorials, screenshots, command output, configuration evidence, and validation results should be added only after the corresponding work has actually been performed.
 
-The lab will eventually walk through concepts such as:
+This repository does **not** represent professional production MECM administration experience.
+
+## Lab Objectives
+
+The lab is structured to develop and document practical understanding of:
 
 - MECM / Configuration Manager Current Branch fundamentals
-- How MECM differs from smaller MDT-style deployment workflows
-- Lab topology planning for a domain-based endpoint management environment
-- Active Directory and DNS dependencies
+- enterprise endpoint-management architecture
+- Active Directory Domain Services and DNS dependencies
 - SQL Server planning for a primary site
-- MECM server prerequisite validation
-- Site installation concepts
-- Distribution point and PXE imaging concepts
-- Boot images, operating system images, packages, applications, and drivers
-- Task sequence planning and test deployments
-- Client installation, discovery, inventory, and health validation
-- Log-driven troubleshooting
-- Documentation discipline for a repeatable lab build
+- MECM prerequisite validation
+- site installation concepts
+- distribution point and PXE infrastructure
+- boot images and operating system images
+- packages, applications, and drivers
+- task-sequence design and deployment testing
+- MECM client installation, discovery, inventory, and health
+- log-driven troubleshooting
+- repeatable implementation and operational documentation
 
-## Lab Disclaimer
+## Architecture Overview
 
-This repository is for learning and practice only.
+A representative lab topology includes:
 
-It should not be treated as a hardened production implementation guide, a compliance document, a security baseline, or a replacement for official Microsoft documentation.
+| Component | Purpose |
+|---|---|
+| Domain Controller | Provides Active Directory Domain Services and DNS for the lab |
+| MECM Primary Site Server | Hosts the Configuration Manager primary site role |
+| SQL Server | Hosts the MECM site database; may be colocated or separated depending on lab design |
+| Distribution Point | Stores deployment content and supports PXE / operating-system deployment workflows |
+| Test Client VM | Used for client installation, inventory, deployment, imaging, and troubleshooting tests |
+| Optional NAT / Router VM | Provides isolated routing or controlled external connectivity when required |
+
+The authoritative network and dependency design belongs in:
+
+`docs/lab-network-design.md`
+
+A simplified logical flow is:
+
+```text
+Active Directory / DNS
+        |
+        +----------------------+
+        |                      |
+ MECM Primary Site -------- SQL Server
+        |
+ Distribution Point / PXE
+        |
+   Test Client VM
+```
+
+## Technical Areas Covered
+
+### Enterprise Infrastructure
+
+- Active Directory and DNS dependencies
+- Windows Server roles and service relationships
+- SQL Server planning
+- network and service prerequisites
+- role separation and dependency mapping
+
+### Endpoint Deployment
+
+- MECM site architecture
+- distribution points
+- PXE
+- boot images
+- operating-system images
+- task sequences
+- application/package deployment concepts
+- client discovery and management
+
+### Troubleshooting and Operations
+
+- symptom capture
+- log selection and interpretation
+- dependency validation
+- content-distribution checks
+- PXE troubleshooting
+- client-health checks
+- repeatable troubleshooting records
+- change and checkpoint documentation
+
+## What This Repository Demonstrates Today
+
+The current repository demonstrates:
+
+- structured enterprise infrastructure planning;
+- dependency analysis across MECM, AD, DNS, SQL, networking, and clients;
+- phased implementation design;
+- troubleshooting workflow design;
+- operational runbook structure;
+- validation/checkpoint discipline;
+- evidence-integrity controls that distinguish performed work from planned work.
+
+As the lab is executed, additional hands-on evidence can be added, including screenshots, configuration notes, command output, troubleshooting records, and validated phase results.
+
+## Implementation Phases
+
+The lab is organized into seven implementation phases:
+
+1. **Foundation** — define scope, topology, boundaries, and required systems.
+2. **Server Prerequisites** — validate operating-system, AD/DNS, SQL, network, and service prerequisites.
+3. **MECM Installation** — prepare and document primary-site installation.
+4. **Imaging Infrastructure** — configure and validate distribution-point, PXE, boot-image, and content concepts.
+5. **Task Sequence** — build the operating-system deployment workflow and supporting content.
+6. **Test Deployment** — validate behavior against a controlled test client and capture troubleshooting evidence.
+7. **Enterprise Concepts** — connect the lab implementation to broader enterprise scale, reliability, and operational considerations.
+
+Phase documents are stored under:
+
+`/phases`
+
+## Operational Documentation
+
+The repository includes:
+
+- `/docs` — architecture, glossary, requirements, and lab design
+- `/phases` — implementation work packages
+- `/runbooks` — client, content-distribution, log, and PXE troubleshooting references
+- `/templates` — lab notes, change logs, screenshots, and troubleshooting records
+- `/checkpoints` — phase-completion validation
+
+These artifacts are intended to make the lab repeatable and auditable rather than a one-time installation exercise.
+
+## Evidence and Safety Boundaries
+
+This repository is for learning and controlled practice.
+
+It should not be treated as:
+
+- professional production MECM ownership;
+- a hardened production implementation guide;
+- a compliance baseline;
+- a security baseline;
+- or a replacement for current Microsoft documentation.
 
 Do not commit:
 
-- Passwords
-- Secrets
-- License keys
-- Tenant IDs
-- Private domain names
-- Production hostnames
-- Customer data
-- Real user data
-- Internal organization details
-- Fake screenshots
-- Invented lab results
+- passwords or secrets;
+- license keys;
+- tenant IDs;
+- private domain names;
+- production hostnames;
+- customer or employer data;
+- real user data;
+- internal organization details;
+- fabricated screenshots;
+- invented validation results.
 
-Screenshots, configuration evidence, and validation notes should only be added after the lab step has actually been performed.
+Screenshots, command output, configuration evidence, and validation notes should only be committed after the corresponding lab step has actually been performed.
 
-## MAS Agent Model Overview
+## What This Demonstrates to an Employer
 
-The MAS model breaks the lab into focused responsibilities. Each agent acts like a specialized guide for one part of the implementation path.
+This project is intended to show how I approach enterprise infrastructure work:
 
-| Agent | Role in the Lab |
-|---|---|
-| MECM Tutorial Agent | Main guide that keeps the learner moving through the lab in order. |
-| Lab Architecture Agent | Defines lab boundaries, topology, server roles, and network assumptions. |
-| Prerequisite Validation Agent | Confirms readiness before installation or phase transitions. |
-| AD/DNS Agent | Guides identity, domain, DNS, and service dependency planning. |
-| SQL Server Agent | Guides SQL Server planning, installation assumptions, and validation checkpoints. |
-| MECM Installation Agent | Guides MECM setup preparation and installation documentation. |
-| Distribution Point / PXE Agent | Guides content distribution, PXE, boot image, and network boot concepts. |
-| OS Deployment Agent | Guides operating system image and task sequence learning. |
-| Client Management Agent | Guides client installation, discovery, inventory, and health validation. |
-| Troubleshooting Agent | Helps isolate problems using logs, symptoms, and repeatable checks. |
-| Documentation Agent | Keeps notes, diagrams, screenshots, runbooks, and checkpoint records organized. |
+- break a complex platform into dependencies and implementation phases;
+- document architecture before making changes;
+- validate prerequisites before installation;
+- use repeatable runbooks and checkpoints;
+- troubleshoot from evidence rather than assumption;
+- distinguish planning from verified implementation;
+- preserve operational and security boundaries.
 
-## Suggested Lab Topology
+As hands-on execution progresses, the repository will increasingly serve as current lab evidence for MECM, Windows infrastructure, deployment systems, and troubleshooting.
 
-A basic learning topology may include the following roles:
+## How to Review This Repository
 
-| Role | Example Purpose |
-|---|---|
-| Domain Controller | Provides Active Directory Domain Services and DNS for the lab. |
-| MECM Primary Site Server | Hosts the MECM site server role for the practice environment. |
-| SQL Server | Hosts the site database. This may be colocated or separated depending on the lab design. |
-| Distribution Point | Stores deployment content and supports PXE imaging concepts. |
-| Test Client VM | Used for MECM client testing and imaging deployment practice. |
-| Optional NAT / Router VM | Provides isolated lab network routing if needed. |
+For a technical review, start with:
 
-The final topology should be documented in `docs/lab-network-design.md` before implementation begins.
+1. `README.md`
+2. `docs/lab-overview.md`
+3. `docs/lab-network-design.md`
+4. `phases/phase-01-foundation.md`
+5. `runbooks/pxe-troubleshooting.md`
+6. `runbooks/client-health-checks.md`
 
-## Phase List
-
-The lab is organized into seven starter phases:
-
-1. `phase-01-foundation.md` — define scope, topology, and lab boundaries.
-2. `phase-02-server-prerequisites.md` — validate server prerequisites before MECM setup.
-3. `phase-03-mecm-installation.md` — document the MECM installation path.
-4. `phase-04-imaging-infrastructure.md` — prepare distribution point, PXE, and imaging concepts.
-5. `phase-05-task-sequence.md` — plan and build the task sequence learning path.
-6. `phase-06-test-deployment.md` — validate deployment behavior with a test client.
-7. `phase-07-enterprise-concepts.md` — connect the lab to enterprise-scale concepts.
-
-## How to Use This Repository
-
-Start by reading the documents in `/docs`, then move through the `/phases` folder in order.
-
-Use the `/agents` folder to decide which specialized guide should help with each phase. Use `/templates` to capture notes, change records, troubleshooting entries, and screenshot checklists. Use `/runbooks` when validating logs, PXE, client health, or content distribution. Use `/checkpoints` before declaring a phase complete.
-
-This repository begins as a scaffold. Full tutorials, screenshots, lab results, and implementation evidence should be added only as the lab is actually built.
+Then review later phase artifacts and evidence as they are completed.
