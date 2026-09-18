@@ -2,16 +2,16 @@
 
 ## Purpose
 
-Use this template before marking a lab phase complete.
+Use this checkpoint before marking a lab phase complete.
 
-A checkpoint helps confirm that the learner has documented assumptions, actual work, evidence, open questions, and next actions.
+A phase is complete only when required work, evidence, unresolved issues, and next actions are documented.
 
 ## Phase Information
 
 - Phase number:
 - Phase name:
 - Date reviewed:
-- Reviewer or agent used:
+- Validation reference / reviewer:
 - Related files:
 
 ## Completion Review
@@ -19,27 +19,31 @@ A checkpoint helps confirm that the learner has documented assumptions, actual w
 | Question | Answer | Notes |
 |---|---|---|
 | Was the phase scope reviewed? | Yes / No |  |
-| Were assumptions documented? | Yes / No |  |
+| Were prerequisites satisfied or explicitly waived? | Yes / No / N/A |  |
+| Was planned work distinguished from executed work? | Yes / No |  |
 | Were required notes created? | Yes / No |  |
-| Were screenshots captured if actual work occurred? | Yes / No / N/A |  |
+| Were screenshots / artifacts captured where applicable? | Yes / No / N/A |  |
+| Were logs or validation outputs recorded where applicable? | Yes / No / N/A |  |
 | Were open questions recorded? | Yes / No |  |
 | Are there unresolved blockers? | Yes / No |  |
 
 ## Evidence
 
-- Lab notes file:
-- Change log file:
+- Lab notes:
+- Change log:
 - Troubleshooting entries:
-- Screenshots:
+- Screenshots / artifacts:
+- Logs / command output:
 - Runbooks used:
+- Vendor documentation used:
 
 ## Decision
 
-- Phase status: Not started / In progress / Complete / Blocked
+- Phase status: Not Started / In Progress / Complete / Blocked
 - Reason:
 - Next phase:
 - Follow-up actions:
 
 ## Integrity Reminder
 
-Do not mark a phase complete unless the required notes and evidence exist. Planned work should remain marked as planned.
+Do not mark a phase complete unless required work and evidence exist. Planned work must remain marked as planned.
