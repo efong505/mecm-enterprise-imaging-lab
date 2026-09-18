@@ -6,7 +6,22 @@ This document defines the infrastructure, software, media, and documentation pre
 
 Requirements may remain `Pending` until verified. A requirement must not be marked satisfied without corresponding evidence.
 
-## Infrastructure Requirements
+## Phase 01 Requirement Baseline
+
+| Requirement | Phase 01 State |
+|---|---|
+| Isolated virtualization environment | Required; platform selection pending |
+| Dedicated lab-only network | Required |
+| Domain Controller / DNS | Required |
+| MECM Primary Site Server | Required |
+| SQL Server capability | Required; placement pending |
+| Distribution Point / PXE capability | Required; placement pending |
+| Test Windows client | Required |
+| Evidence-capture structure | Established |
+| Production/employer isolation | Required and controlling |
+| Secrets / private data exclusion | Required and controlling |
+
+## Infrastructure Requirements for Phase 02 Validation
 
 Document and verify:
 
@@ -20,18 +35,6 @@ Document and verify:
 - DHCP strategy where applicable;
 - controlled Internet access requirements.
 
-## Server and Client Roles
-
-A representative topology may include:
-
-| Role | Purpose | Status |
-|---|---|---|
-| Domain Controller | AD DS and DNS for the isolated lab domain | Planned |
-| MECM Primary Site Server | Configuration Manager primary site | Planned |
-| SQL Server | Site database; colocated or separate based on final design | Planned |
-| Distribution Point | Content distribution and PXE / OSD support | Planned |
-| Test Client | MECM client, imaging, deployment, and troubleshooting validation | Planned |
-
 ## Software and Media Requirements
 
 Identify the source and intended version for:
@@ -43,9 +46,9 @@ Identify the source and intended version for:
 - Windows ADK;
 - Windows PE add-on;
 - required Windows features / roles;
-- any supporting tools used for logging, validation, or evidence capture.
+- supporting tools used for logging, validation, and evidence capture.
 
-Version-specific decisions should be verified against current Microsoft documentation before implementation.
+Version-specific decisions must be verified against current Microsoft documentation before implementation.
 
 ## Security and Isolation Requirements
 
@@ -57,17 +60,10 @@ Before build work begins:
 4. Screenshots must be reviewed before publication.
 5. Evidence must show only the controlled lab environment.
 
-## Readiness Gate
+## Phase 01 Result
 
-Phase 02 should not be considered complete until:
-
-- topology is documented;
-- compute/storage capacity is confirmed;
-- server/client operating-system choices are recorded;
-- required media sources are identified;
-- AD/DNS/SQL/network assumptions are documented;
-- unresolved blockers are explicitly listed.
+The requirement categories and safety boundaries are established. Exact platform, capacity, addressing, software-version, and media decisions remain Phase 02 work.
 
 ## Current Status
 
-**Status: Planned — requirements not yet fully validated.**
+**Phase 01 baseline complete — Phase 02 prerequisite validation required before implementation.**
