@@ -1,30 +1,66 @@
 # Phase 03 — MECM Installation
 
-## Purpose
+## Status
 
-This phase is reserved for the MECM installation portion of the practice lab.
+**Planned — Not Yet Executed**
 
-At bootstrap time, this file only defines the purpose, learning goals, and documentation expectations. It does not contain a completed installation tutorial.
+## Objective
 
-## Learning Goals
+Install and validate the Configuration Manager primary site in the controlled lab after Phase 02 prerequisites are confirmed.
 
-- Understand where MECM installation fits in the lab sequence.
-- Confirm that prerequisite planning is complete before proceeding.
-- Record installation decisions clearly.
-- Prepare post-install validation notes.
+## Prerequisites
 
-## Starter Tasks
+- Phase 02 complete
+- required server roles available
+- AD/DNS prerequisites validated
+- SQL design validated
+- installation media identified
+- site code and site name selected
+- evidence-capture plan prepared
 
-- Review the prerequisite phase.
-- Confirm open questions are documented.
-- Identify the installation agent file.
-- Prepare lab notes before any setup action.
-- Prepare a screenshot checklist for future evidence.
+## Planned Configuration
 
-## Completion Criteria
+- Configuration Manager primary site
+- required site-system roles for the chosen topology
+- console access
+- initial post-install health checks
 
-This phase is complete only after the installation workflow has been performed and documented during a future implementation pass.
+## Implementation Record
 
-## Notes
+When executed, record:
 
-Do not add fake success notes or screenshots. Add evidence only after real lab work is performed.
+- installation date;
+- server used;
+- site code / site name;
+- installation choices;
+- prerequisite-check result;
+- setup-log locations reviewed;
+- warnings or errors encountered;
+- remediation actions.
+
+## Validation Criteria
+
+Phase 03 is complete only after:
+
+- installation finishes successfully;
+- console access is validated;
+- required core services / site components are confirmed;
+- setup logs are reviewed;
+- any warnings or errors are documented;
+- a checkpoint records the result.
+
+## Evidence Required
+
+- sanitized screenshots;
+- setup-log notes;
+- relevant command or console output;
+- lab notes;
+- checkpoint decision.
+
+## Troubleshooting References
+
+Use `runbooks/log-reference.md` and a troubleshooting entry when installation behavior differs from expectations.
+
+## Boundaries
+
+No installation success may be claimed until the workflow has actually been performed and evidence recorded.
