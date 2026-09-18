@@ -6,7 +6,7 @@ This is a controlled hands-on lab / production-like practice environment. It is 
 
 ## Current Status
 
-**Phase 01 — Foundation:** in execution.
+**Phase 01 — Foundation:** complete. **Next:** Phase 02 — Server Prerequisites.
 
 The repository contains the architecture baseline, implementation work packages, runbooks, evidence templates, checkpoints, and supporting documentation required to build and validate the environment. Implementation evidence is added only after the corresponding work is actually performed.
 
