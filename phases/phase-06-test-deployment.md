@@ -1,30 +1,64 @@
 # Phase 06 — Test Deployment
 
-## Purpose
+## Status
 
-This phase is for documenting a controlled test deployment in the MECM Enterprise Imaging Lab.
+**Planned — Not Yet Executed**
 
-At bootstrap time, this file is only a scaffold. It should not contain invented test results.
+## Objective
 
-## Learning Goals
+Execute a controlled test deployment against the designated lab client and capture actual deployment, log, and troubleshooting evidence.
 
-- Understand the purpose of a limited test deployment.
-- Identify the test client and target collection.
-- Track deployment status observations.
-- Record logs, screenshots, and notes after real testing.
+## Prerequisites
 
-## Starter Tasks
+- Phase 05 complete
+- test client identified
+- target collection verified
+- task sequence reviewed
+- PXE / DP / content path validated
+- troubleshooting and screenshot templates prepared
 
-- Review the task sequence phase.
-- Review the client management agent file.
-- Prepare a troubleshooting entry template.
-- Prepare a screenshot checklist.
-- Record expected observations before testing.
+## Test Procedure Record
 
-## Completion Criteria
+When executed, record:
 
-This phase is complete only when the learner has performed a test deployment and recorded actual observations.
+- test date and client;
+- firmware / boot mode;
+- deployment selected;
+- observed PXE behavior;
+- task-sequence start / progression;
+- failure point if applicable;
+- logs reviewed;
+- changes made during troubleshooting;
+- final result.
 
-## Notes
+## Validation Criteria
 
-Keep planned results, expected results, and actual results clearly separated.
+Phase 06 is complete only when:
+
+- a real test deployment has been attempted;
+- actual observations are recorded;
+- logs or console status are reviewed;
+- any failure is documented with evidence;
+- success, failure, or blocked status is explicitly recorded.
+
+A failed deployment may still produce valid troubleshooting evidence, but the phase should not be marked successful until acceptance criteria are met.
+
+## Evidence Required
+
+- sanitized screenshots;
+- task-sequence / client status evidence;
+- relevant log notes;
+- troubleshooting entries;
+- final validation result;
+- checkpoint decision.
+
+## Troubleshooting References
+
+- `runbooks/pxe-troubleshooting.md`
+- `runbooks/client-health-checks.md`
+- `runbooks/content-distribution-checks.md`
+- `runbooks/log-reference.md`
+
+## Boundaries
+
+Expected results and actual results must remain separate. Do not fabricate success, root cause, or remediation.
