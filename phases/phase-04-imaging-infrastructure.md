@@ -1,30 +1,56 @@
 # Phase 04 — Imaging Infrastructure
 
-## Purpose
+## Status
 
-This phase organizes the lab material related to imaging infrastructure.
+**Planned — Not Yet Executed**
 
-The focus is on the supporting pieces required before a task sequence can be tested, such as content distribution concepts, network boot planning, boot image notes, and distribution point readiness.
+## Objective
 
-## Learning Goals
+Configure and validate the content-distribution and PXE components required before an operating-system deployment task sequence can be tested.
 
-- Understand the role of distribution points.
-- Understand why PXE planning matters for imaging.
-- Connect content distribution to operating system deployment.
-- Prepare troubleshooting notes before test deployment begins.
+## Prerequisites
 
-## Starter Tasks
+- Phase 03 complete
+- Configuration Manager site operational
+- distribution-point placement decided
+- network / DHCP / PXE path documented
+- boot-image requirements identified
 
-- Review the distribution point and PXE agent file.
-- Review the content distribution runbook.
-- Review the PXE troubleshooting runbook.
-- Record planned imaging components.
-- Prepare notes for boot image and content availability.
+## Planned Configuration
 
-## Completion Criteria
+- Distribution Point role
+- PXE support as appropriate
+- boot-image availability
+- operating-system content
+- boundaries / boundary groups as required
+- content distribution to the intended DP
 
-This phase is complete when imaging infrastructure assumptions and validation notes are documented.
+## Validation Criteria
 
-## Notes
+Phase 04 is complete only when:
 
-This file is a phase scaffold. Full implementation steps should be added later after the lab design is finalized.
+- required content is distributed successfully;
+- the intended DP is available to the lab client path;
+- PXE settings are configured as designed;
+- boot-image availability is confirmed;
+- relevant logs are reviewed;
+- failures and remediation are documented.
+
+## Evidence Required
+
+- distribution-status evidence;
+- PXE / DP configuration evidence;
+- boot-image evidence;
+- relevant log notes;
+- network-design update if implementation differs from plan;
+- checkpoint decision.
+
+## Troubleshooting References
+
+- `runbooks/content-distribution-checks.md`
+- `runbooks/pxe-troubleshooting.md`
+- `runbooks/log-reference.md`
+
+## Boundaries
+
+Planning notes are not implementation evidence. Do not mark this phase complete until actual DP/PXE/content validation exists.
